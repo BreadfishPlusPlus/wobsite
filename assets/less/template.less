@@ -1,0 +1,88 @@
+body {
+    background-color: #ecf0f1;
+}
+.nav#download {
+    background-color: #FFF;
+    border-top: 1px solid #d4d8d8;
+    border-bottom: 1px solid #d4d8d8;
+    box-shadow: #EAEEEE 0px 2px 0px 0px;
+
+    a {
+        border-radius: 0;
+        border-right: 1px solid #d4d8d8;
+    }
+}
+.carousel {
+    background-color: #34495E;
+    color: #FFF;
+    margin-bottom: 0;
+
+    &, .item, .carousel-inner .container, .carousel-inner .row {
+        height: 300px;
+    }
+
+    .carousel-caption {
+        z-index: 10;
+    }
+
+    .fullheight, .leftright {
+        & > div {
+            height: 100%;
+        }
+    }
+    .leftright > div {
+        position: relative;
+    }
+    .topbot {
+        & > div {
+            height: 50%;
+            position: relative;
+        }
+        .description {
+            top: 30%;
+        }
+    }
+
+    .carousel-inner {
+        .description, .image {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            width: 100%;
+        }
+        .image img {
+            border-radius: 0;
+            background-color: #243342;
+            border-width: 0;
+            display: inline-block;
+            max-width: 100%;
+            padding: 4px;
+        }
+    }
+
+    .carousel-control {
+        &.right, &.left {
+            background-image: none;
+        }
+    }
+
+    .carousel-indicators {
+        bottom: 0;
+        right: 20px;
+        width: auto;
+        left: auto;
+
+        li {
+            border-radius: 0;
+        }
+    }
+}
+
+.feature-list {
+    margin-top: 50px;
+
+    .col-md-4 {
+        margin-bottom: 22px;
+    }
+}
