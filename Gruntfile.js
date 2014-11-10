@@ -35,6 +35,17 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        connect: {
+            server: {
+                options: {
+                    port: 8080,
+                    hostname: '0.0.0.0',
+                    base: '.',
+                    debug: true,
+                    livereload: true
+                }
+            }
+        },
         watch: {
             styles: {
                 files: ['assets/less/*.less'],
@@ -49,13 +60,21 @@ module.exports = function(grunt) {
                 options: {
                     nospawn: true
                 }
+            },
+            livereload: {
+                files: ['assets/**/*.*', 'index.html'],
+                options: {
+                    nospawn: true,
+                    livereload: true
+                }
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['connect', 'watch']);
 };

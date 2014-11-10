@@ -5,10 +5,10 @@ var displayStatus = function (key, elem) {
             var d = data.monitors.monitor[0];
             if (d.status === "2") {
                 $element.addClass('text-success');
-                $element.html('<i class="fa fa-check"></i> Online (' + d.alltimeuptimeratio + '%)');
+                $element.html('<i class="fa fa-thumbs-o-up"></i> Online (' + d.alltimeuptimeratio + '% uptime)');
             } else {
                 $element.addClass('text-danger');
-                $element.html('<i class="fa fa-exclamation"></i> Offline (' + d.alltimeuptimeratio + '%)');
+                $element.html('<i class="fa fa-thumbs-o-down"></i> Offline (' + d.alltimeuptimeratio + '% uptime)');
             }
         } else {
             $element.addClass('text-warning');
