@@ -18,3 +18,4 @@ var displayStatus = function (key, elem) {
 };
 displayStatus('m776327110-9063e705c2e1721741a11ee3', '#service-teamspeak');
 displayStatus('m776470973-6be83e56bfbb9477e071516e', '#service-chat');
+displayStatus('m776523836-c6af347eaef0fd187f938c5c', '#service-screenshot');
